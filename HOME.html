@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <a href="login.html">LOGIN</a>
+</head>
+<body>
+    <h1>Welcome to Our Website!</h1>
+    <p>Explore our interactive map:</p>
+    <!-- Embedding the map directly into the page using an iframe -->
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KXtenbq0zCOCYg7oHxBo26VAaRYREb0" width="100%" height="480"></iframe>
+
+    <!-- Add a button to toggle the display of the favorite column -->
+    <button onclick="toggleFavorite()">Toggle Favorite</button>
+
+    <!-- Add the favorite column -->
+    <div class="favorite-column" style="display: none;">
+        <h2>Favorite</h2>
+        <!-- Add content for the favorite column here -->
+    </div>
+
+    <!-- JavaScript to toggle the display of the favorite column -->
+    <script>
+        function toggleFavorite() {
+            var favoriteColumn = document.querySelector('.favorite-column');
+            if (favoriteColumn.style.display === 'none') {
+                favoriteColumn.style.display = 'block';
+            } else {
+                favoriteColumn.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
